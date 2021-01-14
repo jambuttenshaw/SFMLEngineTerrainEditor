@@ -34,6 +34,7 @@ project "EmptySFMLProject"
 
 	defines
 	{
+		"SFML_STATIC"
 	}
 
 	includedirs
@@ -56,20 +57,18 @@ project "EmptySFMLProject"
 		
 		links
 		{
-			"sfml-graphics-d.lib",
-			"sfml-window-d.lib",
-			"sfml-system-d.lib"
+			"winmm.lib",
+			"opengl32.lib",
+			"freetype.lib",
+			"sfml-graphics-s-d.lib",
+			"sfml-window-s-d.lib",
+			"sfml-system-s-d.lib"
 
 		}
 
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "on"
-		
-		defines
-		{
-			"SFML_STATIC"
-		}
 		
 		links
 		{
