@@ -1,6 +1,6 @@
-workspace "EmptySFMLProject"
+workspace "SFMLEngineTerrainEditor"
     architecture "x86_64"
-    startproject "EmptySFMLProject"
+    startproject "SFMLEngineTerrainEditor"
 
     configurations
     {
@@ -11,25 +11,25 @@ workspace "EmptySFMLProject"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
-IncludeDir["SFML"] = "%{wks.location}/EmptySFMLProject/vendor/SFML/include"
+IncludeDir["SFML"] = "%{wks.location}/SFMLEngineTerrainEditor/vendor/SFML/include"
 
 LibraryDir = {}
-LibraryDir["SFML"] = "%{wks.location}/EmptySFMLProject/vendor/SFML/lib"
+LibraryDir["SFML"] = "%{wks.location}/SFMLEngineTerrainEditor/vendor/SFML/lib"
 
-project "EmptySFMLProject"
+project "SFMLEngineTerrainEditor"
     kind "ConsoleApp"
     language "C++"
     cppdialect "C++17"
 		
-		location("%{wks.location}/EmptySFMLProject")
+		location("%{wks.location}/SFMLEngineTerrainEditor")
 
     targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{
-		"EmptySFMLProject/src/**.h",
-		"EmptySFMLProject/src/**.cpp"
+		"SFMLEngineTerrainEditor/src/**.h",
+		"SFMLEngineTerrainEditor/src/**.cpp"
 	}
 
 	defines
